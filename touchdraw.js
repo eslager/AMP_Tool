@@ -20,9 +20,11 @@ var drawnItems = new L.FeatureGroup();
 map.addLayer(drawnItems);
 
 // Set the title to show on the polygon button
-L.drawLocal.draw.toolbar.buttons.polygon = 'Draw a shape!';
+L.drawLocal.draw.toolbar.buttons.polygon = 'Trace an area!';
+L.drawLocal.draw.toolbar.buttons.polyline = 'Trace streets!';
+L.drawLocal.draw.toolbar.buttons.marker = 'Mark an area!';
 
-var drawControl = new L.Control.Draw({
+var drawControlGreen = new L.Control.Draw({
     position: 'topleft',
     draw: {
         polyline: {
@@ -53,7 +55,7 @@ var drawControl = new L.Control.Draw({
         remove: false
     }
 });
-map.addControl(drawControl);
+map.addControl(drawControlGreen);
 
 map.on('draw:created', function (green) {
     var type = green.layerType,
@@ -79,15 +81,17 @@ L.DomUtil.get('changeColor').onclick = function () {
     drawControl.setDrawingOptions({ rectangle: { shapeOptions: { color: '#004a80' } } });
 };
 
-
+// *************************************************************************************************
 // New Group: Blue
        var drawnItems = new L.FeatureGroup();
        map.addLayer(drawnItems);
 
        // Set the title to show on the polygon button
-       L.drawLocal.draw.toolbar.buttons.polygon = 'Draw a shape!';
+       L.drawLocal.draw.toolbar.buttons.polygon = 'Trace an area!';
+       L.drawLocal.draw.toolbar.buttons.polyline = 'Trace streets!';
+       L.drawLocal.draw.toolbar.buttons.marker = 'Mark an area!';
 
-       var drawControl = new L.Control.Draw({
+       var drawControlBlue = new L.Control.Draw({
            position: 'topleft',
            draw: {
                polyline: false,
@@ -112,7 +116,7 @@ L.DomUtil.get('changeColor').onclick = function () {
                remove: false
            }
        });
-       map.addControl(drawControl);
+       map.addControl(drawControlBlue);
 
        map.on('draw:created', function (blue) {
            var type = blue.layerType,
@@ -138,15 +142,17 @@ L.DomUtil.get('changeColor').onclick = function () {
            drawControl.setDrawingOptions({ rectangle: { shapeOptions: { color: '#004a80' } } });
        };
 
-
+// ****************************************************************************
 // New group: Black
 var drawnItems = new L.FeatureGroup();
 map.addLayer(drawnItems);
 
 // Set the title to show on the polygon button
-L.drawLocal.draw.toolbar.buttons.polygon = 'Draw a shape!';
+L.drawLocal.draw.toolbar.buttons.polygon = 'Trace an area!';
+L.drawLocal.draw.toolbar.buttons.polyline = 'Trace streets!';
+L.drawLocal.draw.toolbar.buttons.marker = 'Mark an area!';
 
-var drawControl = new L.Control.Draw({
+var drawControlBlack = new L.Control.Draw({
     position: 'topleft',
     draw: {
         polyline: false,
@@ -171,7 +177,7 @@ var drawControl = new L.Control.Draw({
         remove: false
     }
 });
-map.addControl(drawControl);
+map.addControl(drawControlBlack);
 
 map.on('draw:created', function (black) {
     var type = black.layerType,
@@ -197,21 +203,25 @@ L.DomUtil.get('changeColor').onclick = function () {
     drawControl.setDrawingOptions({ rectangle: { shapeOptions: { color: '#004a80' } } });
 };
 
+
+// **************************************************************************
 //New Group: RED
 var drawnItems = new L.FeatureGroup();
 map.addLayer(drawnItems);
 
 // Set the title to show on the polygon button
-L.drawLocal.draw.toolbar.buttons.polygon = 'Draw a shape!';
+L.drawLocal.draw.toolbar.buttons.polygon = 'Trace an area!';
+L.drawLocal.draw.toolbar.buttons.polyline = 'Trace streets!';
+L.drawLocal.draw.toolbar.buttons.marker = 'Mark an area!';
 
-var drawControl = new L.Control.Draw({
+var drawControlRed = new L.Control.Draw({
     position: 'topleft',
     draw:  {
         polyline: {
             metric: false,
             showArea: false,
             shapeOptions: {
-                color: 'green'
+                color: 'red'
             }
         },
         polygon: {
@@ -235,7 +245,9 @@ var drawControl = new L.Control.Draw({
         remove: true
     }
 });
-map.addControl(drawControl);
+map.addControl(drawControlRed);
+
+
 
 map.on('draw:created', function (red) {
     var type = red.layerType,

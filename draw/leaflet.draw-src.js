@@ -30,7 +30,7 @@ L.drawLocal = {
 				text: 'Delete last point'
 			},
 			buttons: {
-				polyline: 'Draw a polyline',
+				polyline: 'Draw a  line',
 				polygon: 'Draw a polygon',
 				rectangle: 'Draw a rectangle',
 				circle: 'Draw a circle',
@@ -1142,7 +1142,7 @@ L.Edit.Marker = L.Handler.extend({
 		if (!this._icon) {
 			return;
 		}
-		
+
 		// This is quite naughty, but I don't see another way of doing it. (short of setting a new icon)
 		var icon = this._icon;
 
@@ -1380,7 +1380,7 @@ L.Edit.Poly = L.Handler.extend({
 		var layerPoint = this._map.mouseEventToLayerPoint(e.originalEvent.touches[0]),
 			latlng = this._map.layerPointToLatLng(layerPoint),
 			marker = e.target;
-				
+
 		L.extend(marker._origLatLng, latlng);
 
 		if (marker._middleLeft) {
@@ -1677,7 +1677,7 @@ L.Edit.SimpleShape = L.Handler.extend({
 			var corners = this._getCorners(),
 				marker = e.target,
 				currentCornerIndex = marker._cornerIndex;
-			
+
 			marker.setOpacity(0);
 
 			// Copyed from Edit.Rectangle.js line 23 _onMarkerDragStart()
@@ -1685,7 +1685,7 @@ L.Edit.SimpleShape = L.Handler.extend({
 			this._oppositeCorner = corners[(currentCornerIndex + 2) % 4];
 			this._toggleCornerMarkers(0, currentCornerIndex);
 		}
-	
+
 		this._shape.fire('editstart');
 	},
 
@@ -1942,7 +1942,7 @@ L.Map.TouchExtend = L.Handler.extend({
 		L.DomEvent.off(this._container, 'touchleave', this._onTouchLeave);
 		L.DomEvent.off(this._container, 'touchmove', this._onTouchMove);
 	},
-	
+
 	_touchEvent: function (e, type) {
 		// #TODO: fix the pageX error that is do a bug in Android where a single touch triggers two click events
 		// _filterClick is what leaflet uses as a workaround.
@@ -1968,7 +1968,7 @@ L.Map.TouchExtend = L.Handler.extend({
 
 		var type = 'touchstart';
 		this._touchEvent(e, type);
-		
+
 	},
 
 	_onTouchEnd: function (e) {
@@ -1977,7 +1977,7 @@ L.Map.TouchExtend = L.Handler.extend({
 		var type = 'touchend';
 		this._touchEvent(e, type);
 	},
-	
+
 	_onTouchCancel: function (e) {
 		if (!this._map._loaded) { return; }
 
