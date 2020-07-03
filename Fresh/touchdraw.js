@@ -24,7 +24,7 @@ L.drawLocal.draw.toolbar.buttons.polygon = 'Trace an area!';
 L.drawLocal.draw.toolbar.buttons.polyline = 'Trace streets!';
 L.drawLocal.draw.toolbar.buttons.marker = 'Mark an area!';
 
-var drawControlGreen = new L.Control.Draw({
+// var drawControlGreen = new L.Control.Draw({
     position: 'topleft',
     draw: {
         polyline: {
@@ -55,7 +55,7 @@ var drawControlGreen = new L.Control.Draw({
         remove: false
     }
 });
-map.addControl(drawControlGreen);
+// map.addControl(drawControlGreen);
 
 map.on('draw:created', function (green) {
     var type = green.layerType,
@@ -80,6 +80,7 @@ map.on('draw:edited', function (green) {
 L.DomUtil.get('changeColor').onclick = function () {
     drawControl.setDrawingOptions({ rectangle: { shapeOptions: { color: '#004a80' } } });
 };
+
 
 // *************************************************************************************************
 // New Group: Blue

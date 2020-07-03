@@ -54,8 +54,18 @@ var drawControlGreen = new L.Control.Draw({
         edit:false,
         remove: false
     }
-});
+},
+
+drawControlGreen.onAdd= function (map) {
+    var div = L.DomUtil.create('button', '.leaflet-draw a');
+      div.style.backgroundColor = 'yellow';
+    return drawControlGreen.div;
+
+    }
+);
+
 map.addControl(drawControlGreen);
+
 
 map.on('draw:created', function (green) {
     var type = green.layerType,
@@ -80,6 +90,9 @@ map.on('draw:edited', function (green) {
 L.DomUtil.get('changeColor').onclick = function () {
     drawControl.setDrawingOptions({ rectangle: { shapeOptions: { color: '#004a80' } } });
 };
+
+
+
 
 // *************************************************************************************************
 // New Group: Blue
