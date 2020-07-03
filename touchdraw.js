@@ -61,6 +61,10 @@ drawControlGreen.onAdd= function (map) {
       div.style.backgroundColor = 'yellow';
     return drawControlGreen.div;
 
+// L.DomUtil.get('changeColor').onAdd = function () {
+//     drawControl.setDrawingOptions({ shapeOptions: { backgroundColorcolor: 'yellow' } } );
+
+
     }
 );
 
@@ -87,6 +91,7 @@ map.on('draw:edited', function (green) {
     console.log("Edited " + countOfEditedLayers + " layers");
 });
 
+// ???????
 L.DomUtil.get('changeColor').onclick = function () {
     drawControl.setDrawingOptions({ rectangle: { shapeOptions: { color: '#004a80' } } });
 };
