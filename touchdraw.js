@@ -56,16 +56,17 @@ var drawControlGreen = new L.Control.Draw({
     }
 },
 
-drawControlGreen.onAdd= function (map) {
-    var div = L.DomUtil.create('button', '.leaflet-draw a');
-      div.style.backgroundColor = 'yellow';
-    return drawControlGreen.div;
-
+// background color tests:
+// drawControlGreen.onAdd= function (map) {
+//     var div = L.DomUtil.create('button', '.leaflet-draw a');
+//       div.style.backgroundColor = 'yellow';
+//     return drawControlGreen.div;
+//
 // L.DomUtil.get('changeColor').onAdd = function () {
 //     drawControl.setDrawingOptions({ shapeOptions: { backgroundColorcolor: 'yellow' } } );
-
-
-    }
+//
+//
+//     }
 );
 
 map.addControl(drawControlGreen);
