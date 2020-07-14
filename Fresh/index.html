@@ -5,6 +5,7 @@
 
     <link rel="stylesheet" href="leaflet/leaflet.css" />
     <link rel="stylesheet" href="draw/leaflet.draw.css" />
+    <link rel="stylesheet" href="styles.css" />
 
     <script src="leaflet/leaflet-src.js"></script>
 
@@ -40,18 +41,47 @@
     <script src="src/edit/handler/EditToolbar.Delete.js"></script>
 </head>
 <body>
-	<div id="map" style="position:absolute; top:0; bottom:0; right: 0; left: 0; width:100%;"></div>
+
+	<!-- <div id="map" style="position:absolute; top:0; bottom:0; right: 0; left: 0; width:100%;"></div> -->
 	<button id="changeColor">Rectangle -> Blue</button>
 	<script src="touchdraw.js"></script>
 
+  <button id="modal-btn"> click me, I make a modal</button>
+  <div class="modal">
+    <div class="modal-header">
+      <span class="close-btn">&times;</span>
+      <h1>I am the Header</h1>
+    </div>
+    <div class="modal-content">
+      <p>this is the text inside the modal</p>
+    </div>
+    <div class="modal-footer">
+      <h2>I am the Footer</h2>
+    </div>
+  </div>
+
+
+
   <!-- The core Firebase JS SDK is always required and must be listed first -->
-<script src="/__/firebase/7.15.5/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/7.15.5/firebase-app.js"></script>
 
-<!-- TODO: Add SDKs for Firebase products that you want to use
-     https://firebase.google.com/docs/web/setup#available-libraries -->
+  <!-- TODO: Add SDKs for Firebase products that you want to use
+       https://firebase.google.com/docs/web/setup#available-libraries -->
 
-<!-- Initialize Firebase -->
-<script src="/__/firebase/init.js"></script>
+  <script>
+    // Your web app's Firebase configuration
+    var firebaseConfig = {
+      apiKey: "AIzaSyCC0WpjNUl_FKV5VhMkRomRRl1hypXcMM8",
+      authDomain: "ampdatacollectiontool.firebaseapp.com",
+      databaseURL: "https://ampdatacollectiontool.firebaseio.com",
+      projectId: "ampdatacollectiontool",
+      storageBucket: "ampdatacollectiontool.appspot.com",
+      messagingSenderId: "692634247744",
+      appId: "1:692634247744:web:aefca39af945a7491ff5a5"
+    };
+    // Initialize Firebase
+    firebase.initializeApp(firebaseConfig);
+  </script>
 
 </body>
 </html>

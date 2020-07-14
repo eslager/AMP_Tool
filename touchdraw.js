@@ -31,7 +31,7 @@ var drawControlGreen = new L.Control.Draw({
             metric: false,
             showArea: false,
             shapeOptions: {
-                color: 'green'
+              color: 'green'
             }
         },
         polygon: {
@@ -93,17 +93,17 @@ map.on('draw:edited', function (green) {
 });
 
 // ???????
-L.DomUtil.get('changeColor').onclick = function () {
-    drawControl.setDrawingOptions({ rectangle: { shapeOptions: { color: '#004a80' } } });
-};
+// L.DomUtil.get('changeColor').onclick = function () {
+//     drawControl.setDrawingOptions({ rectangle: { shapeOptions: { color: '#004a80' } } });
+// };
 
 
 
 
 // *************************************************************************************************
 // New Group: Blue
-       var drawnItems = new L.FeatureGroup();
-       map.addLayer(drawnItems);
+       var bluedrawnItems = new L.FeatureGroup();
+       map.addLayer(bluedrawnItems);
 
        // Set the title to show on the polygon button
        L.drawLocal.draw.toolbar.buttons.polygon = 'Trace an area!';
@@ -130,7 +130,7 @@ L.DomUtil.get('changeColor').onclick = function () {
                marker: true
            },
            edit: {
-               featureGroup: drawnItems,
+               featureGroup: bluedrawnItems,
                edit:false,
                remove: false
            }
@@ -145,7 +145,7 @@ L.DomUtil.get('changeColor').onclick = function () {
                layer.bindPopup('A popup!');
            }
 
-           drawnItems.addLayer(layer);
+           bluedrawnItems.addLayer(layer);
        });
 
        map.on('draw:edited', function (blue) {
@@ -157,9 +157,9 @@ L.DomUtil.get('changeColor').onclick = function () {
            console.log("Edited " + countOfEditedLayers + " layers");
        });
 
-       L.DomUtil.get('changeColor').onclick = function () {
-           drawControl.setDrawingOptions({ rectangle: { shapeOptions: { color: '#004a80' } } });
-       };
+       // L.DomUtil.get('changeColor').onclick = function () {
+       //     drawControl.setDrawingOptions({ rectangle: { shapeOptions: { color: '#004a80' } } });
+       // };
 
 // ****************************************************************************
 // New group: Black
@@ -218,9 +218,9 @@ map.on('draw:edited', function (black) {
     console.log("Edited " + countOfEditedLayers + " layers");
 });
 
-L.DomUtil.get('changeColor').onclick = function () {
-    drawControl.setDrawingOptions({ rectangle: { shapeOptions: { color: '#004a80' } } });
-};
+// L.DomUtil.get('changeColor').onclick = function () {
+//     drawControl.setDrawingOptions({ rectangle: { shapeOptions: { color: '#004a80' } } });
+// };
 
 
 // **************************************************************************
@@ -288,6 +288,6 @@ map.on('draw:edited', function (red) {
     console.log("Edited " + countOfEditedLayers + " layers");
 });
 
-L.DomUtil.get('changeColor').onclick = function () {
-    drawControl.setDrawingOptions({ rectangle: { shapeOptions: { color: '#004a80' } } });
-};
+// L.DomUtil.get('changeColor').onclick = function () {
+//     drawControl.setDrawingOptions({ rectangle: { shapeOptions: { color: '#004a80' } } });
+// };

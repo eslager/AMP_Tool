@@ -5,6 +5,7 @@
 
     <link rel="stylesheet" href="leaflet/leaflet.css" />
     <link rel="stylesheet" href="draw/leaflet.draw.css" />
+    <link rel="stylesheet" href="styles.css" />
 
     <script src="leaflet/leaflet-src.js"></script>
 
@@ -40,8 +41,107 @@
     <script src="src/edit/handler/EditToolbar.Delete.js"></script>
 </head>
 <body>
-	<div id="map" style="position:absolute; top:0; bottom:0; right: 0; left: 0; width:100%;"></div>
-	<button id="changeColor">Rectangle -> Blue</button>
-	<script src="touchdraw.js"></script>
+	<!-- <div id="map"></div> -->
+    <!-- No idea what this does but v e r y important -->
+      <!-- <button id="changeColor">Rectangle - Blue</button> -->
+
+
+      <!-- Trigger/Open The Modal -->
+      <button id="myBtn">DONE</button>
+
+      <!-- The Modal -->
+      <div id="myModal" class="modal">
+
+        <!-- Modal content -->
+        <div class="modal-content">
+          <div class="modal-header">
+            <span class="close">&times;</span>
+            <h2>Student Questionnaire</h2>
+          </div>
+          <div class="modal-body">
+            <form>
+              <p><b>What school do you go to?</b>
+                <br>
+                  <input type="radio" id="school" name="lincoln" value="lincoln">
+                      <label for="lincoln">Lincoln</label>
+                  <input type="radio" id="school" name="first creek" value="frist creek">
+                      <label for="first creek">First Creek</label><br>
+                  <input type="radio" id="school" name="stewart" value="stewart">
+                      <label for="stewart">Stewart</label>
+                  <input type="radio" id="school" name="giaudrone" value="giaudrone">
+                    <label for="giaudrone">Giaudrone</label><br>
+                  </p>
+
+                <p><b>How old are you?</b>
+                  <br>
+                    <input type="radio" id="age" name="11-12" value="11-12">
+                        <label for="11-12">11-12</label>
+                    <input type="radio" id="age" name="13-14" value="13-14">
+                        <label for="13-14">13-14</label>
+                        <br>
+                    <input type="radio" id="age" name="15-16" value="15-16">
+                        <label for="15-16">15-16</label>
+                    <input type="radio" id="age" name="17-18" value="17-18">
+                      <label for="17-18">17-18</label>
+                      <br>
+                    </p>
+
+                <p><b>Gender: as you identify?</b>
+                  <br>
+                    <input type="radio" id="gender" name="male" value="male">
+                        <label for="male">Male</label>
+                    <input type="radio" id="gender" name="female" value="female">
+                        <label for="female">Female</label>
+                    <input type="radio" id="gender" name="nonbinary" value="nonbinary">
+                        <label for="nonbinary">Nonbinary</label><br>
+                    </p>
+
+                <p><b>Race/Ethnicity: as you identify?</b>
+                  <br>
+                    <input type="checkbox" id="race" name="african american" value="african american">
+                        <label for="african american">African American</label>
+                    <input type="checkbox" id="race" name="american indian" value="american indian">
+                        <label for="american indian">American Indian</label>
+                        <br>
+                    <input type="checkbox" id="race" name="asian" value="asian">
+                        <label for="asian">Asian</label>
+                    <input type="checkbox" id="race" name="hispanic" value="hispanic">
+                      <label for="hispanic">Hispanic</label>
+                      <br>
+                    <input type="checkbox" id="race" name="pacific islander" value="pacific islander">
+                      <label for="pacific islander">Pacific Islander</label>
+                    <input type="checkbox" id="race" name="white" value="white">
+                        <label for="white">White</label>
+                        <br>
+                    <input type="checkbox" id="race" name="other" value="other">
+                        <label for="other">Other</label>
+                        <br>
+                    </p>
+
+                  <p><b>What do you do in the two to three hours immediately after school?</b>
+                    <br>
+                    <textarea rows="4" cols="50" id="afterschool" name="afterschool"  maxlength="150"></textarea>
+                  </p>
+
+                  <p><b>How do you feel about where you are and what you're doing after afterschool?</b>
+                    <br>
+                    <textarea rows="4" cols="50" id="feel" name="feel" maxlength="150"></textarea><br><br>
+                  </p>
+
+                <p><input type="submit" value="FINISHED!" ></p>
+
+            </form>
+          </div>
+          <!-- <div class="modal-footer">
+            <p><button><input type="submit">FINISHED!</button></p>
+          </div> -->
+        </div>
+
+      </div>
+
 </body>
+    <script src="test.js"></script>
+
+<script src="touchdraw.js"></script>
+
 </html>
