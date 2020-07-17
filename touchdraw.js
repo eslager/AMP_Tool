@@ -24,7 +24,8 @@ L.drawLocal.draw.toolbar.buttons.polygon = 'Trace an area!';
 L.drawLocal.draw.toolbar.buttons.polyline = 'Trace streets!';
 L.drawLocal.draw.toolbar.buttons.marker = 'Mark an area!';
 
-var drawControlGreen = new L.Control.Draw({
+var drawControlGreen = new L.Control.Draw(
+  {
     position: 'topleft',
     draw: {
         polyline: {
@@ -54,20 +55,8 @@ var drawControlGreen = new L.Control.Draw({
         edit:false,
         remove: false
     }
-},
+});
 
-// background color tests:
-// drawControlGreen.onAdd= function (map) {
-//     var div = L.DomUtil.create('button', '.leaflet-draw a');
-//       div.style.backgroundColor = 'yellow';
-//     return drawControlGreen.div;
-//
-// L.DomUtil.get('changeColor').onAdd = function () {
-//     drawControl.setDrawingOptions({ shapeOptions: { backgroundColorcolor: 'yellow' } } );
-//
-//
-//     }
-);
 
 map.addControl(drawControlGreen);
 
@@ -91,12 +80,6 @@ map.on('draw:edited', function (green) {
     });
     console.log("Edited " + countOfEditedLayers + " layers");
 });
-
-// ???????
-// L.DomUtil.get('changeColor').onclick = function () {
-//     drawControl.setDrawingOptions({ rectangle: { shapeOptions: { color: '#004a80' } } });
-// };
-
 
 
 
@@ -157,9 +140,6 @@ map.on('draw:edited', function (green) {
            console.log("Edited " + countOfEditedLayers + " layers");
        });
 
-       // L.DomUtil.get('changeColor').onclick = function () {
-       //     drawControl.setDrawingOptions({ rectangle: { shapeOptions: { color: '#004a80' } } });
-       // };
 
 // ****************************************************************************
 // New group: Black
@@ -218,9 +198,7 @@ map.on('draw:edited', function (black) {
     console.log("Edited " + countOfEditedLayers + " layers");
 });
 
-// L.DomUtil.get('changeColor').onclick = function () {
-//     drawControl.setDrawingOptions({ rectangle: { shapeOptions: { color: '#004a80' } } });
-// };
+
 
 
 // **************************************************************************
@@ -288,6 +266,8 @@ map.on('draw:edited', function (red) {
     console.log("Edited " + countOfEditedLayers + " layers");
 });
 
-// L.DomUtil.get('changeColor').onclick = function () {
-//     drawControl.setDrawingOptions({ rectangle: { shapeOptions: { color: '#004a80' } } });
-// };
+
+// 
+// L.easyButton('fa-comment-o', function(btn, map) {
+//     document.getElementById('#myModal').modal('show');
+// }, 'Informacije').addTo(map);
