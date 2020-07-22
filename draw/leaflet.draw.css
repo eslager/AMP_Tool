@@ -8,6 +8,7 @@
 
 .leaflet-draw-toolbar {
 	margin-top: 12px;
+
 }
 
 .leaflet-draw-toolbar-top {
@@ -25,18 +26,20 @@
 .leaflet-draw-toolbar a {
 	background-image: url('images/spritesheet.png');
 	background-repeat: no-repeat;
+	/* background-color: green; */
 }
 
 .leaflet-retina .leaflet-draw-toolbar a {
 	background-image: url('images/spritesheet-2x.png');
 	background-size: 270px 30px;
+	/* background-color: green; */
 }
 
 .leaflet-draw a {
 	display: block;
 	text-align: center;
 	text-decoration: none;
-	background-color: green;
+	/* background-color: green; */
 }
 
 .drawControlRed {
@@ -147,12 +150,43 @@
 	background-position: 0 -1px;
 }
 
+.leaflet-draw-toolbar .leaflet-draw-draw-polylineGreen {
+	background-position: -2px -2px;
+	background-color: green;
+}
+
+.leaflet-touch .leaflet-draw-toolbar .leaflet-draw-draw-polylineGreen {
+	background-position: 0 -1px;
+	background-color: green;
+}
+
+
 .leaflet-draw-toolbar .leaflet-draw-draw-polygon {
 	background-position: -31px -2px;
 }
 
 .leaflet-touch .leaflet-draw-toolbar .leaflet-draw-draw-polygon {
 	background-position: -29px -1px;
+}
+
+.leaflet-draw-toolbar .leaflet-draw-draw-polygonGreen {
+	background-position: -31px -2px;
+	background-color: green;
+}
+
+.leaflet-touch .leaflet-draw-toolbar .leaflet-draw-draw-polygonGreen {
+	background-position: -29px -1px;
+	background-color: green;
+}
+
+.leaflet-draw-toolbar .leaflet-draw-draw-polygonBlue {
+	background-position: -31px -2px;
+	background-color: blue;
+}
+
+.leaflet-touch .leaflet-draw-toolbar .leaflet-draw-draw-polygonBlue {
+	background-position: -29px -1px;
+	background-color: blue;
 }
 
 .leaflet-draw-toolbar .leaflet-draw-draw-rectangle {
@@ -177,6 +211,16 @@
 
 .leaflet-touch .leaflet-draw-toolbar .leaflet-draw-draw-marker {
 	background-position: -120px -1px;
+}
+
+.leaflet-draw-toolbar .leaflet-draw-draw-markerGreen {
+	background-position: -122px -2px;
+	background-color: green;
+}
+
+.leaflet-touch .leaflet-draw-toolbar .leaflet-draw-draw-markerGreen {
+	background-position: -120px -1px;
+	background-color: green;
 }
 
 /* ================================================================== */
